@@ -13,17 +13,24 @@
         formControlName="title"
       />
       <div *ngIf="note.get('title').errors && note.get('title').dirty">
-        <span class="input-error" *ngIf="note.get('title').hasError('required')"
-          >Field required</span
+        <p
+          class="m-0 mt-1 input-error"
+          *ngIf="note.get('title').hasError('required')"
         >
-        <span
-          class="input-error"
+          Field required
+        </p>
+        <p
+          class="m-0 mt-1 input-error"
           *ngIf="note.get('title').hasError('maxlength')"
-          >Max length 50 characters</span
         >
-        <span class="input-error" *ngIf="note.get('title').hasError('pattern')"
-          >Special characters are not allowed</span
+          Max length 50 characters
+        </p>
+        <p
+          class="m-0 mt-1 input-error"
+          *ngIf="note.get('title').hasError('pattern')"
         >
+          Special characters are not allowed
+        </p>
       </div>
     </div>
     <div class="w-100 mb-3">
@@ -33,16 +40,18 @@
         formControlName="content"
       ></textarea>
       <div *ngIf="note.get('content').errors && note.get('content').dirty">
-        <span
-          class="input-error"
+        <p
+          class="m-0 mt-1 input-error"
           *ngIf="note.get('content').hasError('required')"
-          >Field required</span
         >
-        <span
-          class="input-error"
+          Field required
+        </p>
+        <p
+          class="m-0 mt-1 input-error"
           *ngIf="note.get('content').hasError('maxlength')"
-          >Max length 250 characters</span
         >
+          Max length 250 characters
+        </p>
       </div>
     </div>
     <button class="w-100 submit-btn" type="submit" [disabled]="note.invalid">
