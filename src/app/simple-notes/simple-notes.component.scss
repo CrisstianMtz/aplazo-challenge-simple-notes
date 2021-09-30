@@ -1,0 +1,10 @@
+@import "./src/shared/styles/break-points.scss";
+
+.content {
+  flex: 0 0 auto;
+  width: 50%;
+
+  @media screen and (max-width: $sm) {
+    width: 100%;
+  }
+}

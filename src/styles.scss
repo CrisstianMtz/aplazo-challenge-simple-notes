@@ -1,0 +1,18 @@
+@import "shared/styles/colors.scss";
+
+/* GLOBAL STYLES */
+@import "shared/styles/global.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+
+  min-height: 100vh;
+
+  background: radial-gradient($black-75, $black-90);
+}

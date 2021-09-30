@@ -1,0 +1,61 @@
+@import "./src/shared/styles/colors.scss";
+
+.content {
+  background: $glass-input;
+  backdrop-filter: blur(4px);
+
+  border-radius: 7px;
+
+  padding: 5px;
+
+  color: $white;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+
+    background: $glass-input-fc;
+  }
+
+  &__txt {
+    padding: 10px;
+
+    height: 300px;
+
+    resize: none;
+  }
+}
+
+.input-error {
+  color: $red;
+
+  font-size: 14px;
+}
+
+.submit-btn {
+  border-radius: 6px;
+  padding: 10px 15px;
+
+  text-transform: uppercase;
+  font-weight: bolder;
+
+  color: $white;
+  background-color: $blue;
+
+  cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
+
+  &[disabled] {
+    filter: brightness(0.75);
+
+    cursor: no-drop;
+  }
+}
+
+.ng-invalid.ng-dirty:not(form),
+.ng-invalid:not(form).form-submitted {
+  border: solid 1px $red;
+}

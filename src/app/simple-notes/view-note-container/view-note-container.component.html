@@ -1,0 +1,18 @@
+<div class="d-flex flex-column justify-content-around card-glass">
+  <div class="mb-3 note-container">
+    <ng-container *ngIf="notes; else NoInfo">
+      <ng-container *ngFor="let note of notes">
+        <app-view-note
+          [note]="note"
+          (noteId)="deleteSelectedNote($event)"
+        ></app-view-note>
+      </ng-container>
+    </ng-container>
+    <ng-template #NoInfo>
+      <h2 class="text-center no-content">Add a note</h2>
+    </ng-template>
+  </div>
+  <button class="w-100 delete-btn" (click)="onDeleteAllNotes()">
+    Delete all notes
+  </button>
+</div>

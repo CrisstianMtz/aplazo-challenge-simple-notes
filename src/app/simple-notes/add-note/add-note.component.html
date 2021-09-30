@@ -1,0 +1,52 @@
+<div class="d-flex align-items-center justify-content-center card-glass">
+  <form
+    [formGroup]="note"
+    (ngSubmit)="saveData()"
+    novalidate
+    class="col-10 p-3"
+  >
+    <div class="w-100 mb-3">
+      <input
+        class="w-100 content"
+        type="text"
+        placeholder="Title"
+        formControlName="title"
+      />
+      <div *ngIf="note.get('title').errors && note.get('title').dirty">
+        <span class="input-error" *ngIf="note.get('title').hasError('required')"
+          >Field required</span
+        >
+        <span
+          class="input-error"
+          *ngIf="note.get('title').hasError('maxlength')"
+          >Max length 50 characters</span
+        >
+        <span class="input-error" *ngIf="note.get('title').hasError('pattern')"
+          >Special characters are not allowed</span
+        >
+      </div>
+    </div>
+    <div class="w-100 mb-3">
+      <textarea
+        class="w-100 content content__txt"
+        placeholder="Add note content"
+        formControlName="content"
+      ></textarea>
+      <div *ngIf="note.get('content').errors && note.get('content').dirty">
+        <span
+          class="input-error"
+          *ngIf="note.get('content').hasError('required')"
+          >Field required</span
+        >
+        <span
+          class="input-error"
+          *ngIf="note.get('content').hasError('maxlength')"
+          >Max length 250 characters</span
+        >
+      </div>
+    </div>
+    <button class="w-100 submit-btn" type="submit" [disabled]="note.invalid">
+      Save note
+    </button>
+  </form>
+</div>

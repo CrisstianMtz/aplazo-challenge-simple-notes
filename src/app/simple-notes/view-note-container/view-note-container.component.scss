@@ -1,0 +1,29 @@
+@import "./src/shared/styles/colors.scss";
+
+.note-container {
+  height: 75%;
+  overflow: auto;
+}
+
+.delete-btn {
+  border-radius: 6px;
+  padding: 10px 15px;
+
+  text-transform: uppercase;
+  font-weight: bolder;
+
+  color: $white;
+  background-color: $red;
+
+  cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
+}
+
+.no-content {
+  color: $black-90;
+
+  font-weight: bolder;
+}

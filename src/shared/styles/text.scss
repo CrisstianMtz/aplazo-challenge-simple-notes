@@ -1,0 +1,17 @@
+@import "colors.scss";
+@import "break-points.scss";
+
+/* Global text styles */
+html,
+body {
+  font-family: "Lato", "Arial";
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 21px;
+  color: $white;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $lg) {
+    font-size: 14px;
+  }
+}

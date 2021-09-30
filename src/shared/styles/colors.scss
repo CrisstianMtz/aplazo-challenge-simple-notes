@@ -1,0 +1,25 @@
+/*IMPORTANT: NOTE COLORS ARE DEFINED IN NOTES.MODEL.TS */
+
+/*Global colors*/
+$black: #000;
+$black-90: #1a1a1a;
+$black-75: #404040;
+
+/*Text colors*/
+$white: #fff;
+
+/*Button colors*/
+$red: #ff0000;
+$red-90: #e93131;
+
+$blue: #3b89fb;
+
+/* Glass background */
+$glass: rgba(158, 158, 158, 0.2);
+
+$glass-input: rgba(27, 27, 27, 0.7);
+$glass-input-fc: rgba(27, 27, 27, 0.55);
+
+/* Text shadow */
+$border: -1px -1px 1px #666666, 1px 1px 1px #666666, -1px 1px 1px #666666,
+  1px -1px 1px #666666;
